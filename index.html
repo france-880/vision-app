@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VISION</title>
+  <link rel="stylesheet" href="homepage.main.style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="icon" type="image/png" href="logotop.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="logotop.png" alt="Logo" />
+            <h3>VISION</h3>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="#" onclick="refreshPage()">Home</a></li>
+                <li><a href="#scroll-3">Features</a></li>
+                <!-- <li><a href="#" class="btn">Sign up</a></li> -->
+            </ul>
+        </div>
+        <div class="overlay"></div>
+        <div class="bar"></div>
+    </div>
+</header>
+
+<body>
+  <!-- Scroll 1: Hero Section -->
+<section id="scroll-1" class="scroll-section hero-section">
+  <!-- Floating Circles Container -->
+  <div class="floating-circles">
+    <!-- Circles will be dynamically added here using JavaScript -->
+  </div>
+
+  <div class="left-content">
+    <h1 class="animate__animated animate__fadeInDown">Welcome to VISION</h1>
+    <h6 class="animate__animated animate__fadeInUp">This innovative headwear is designed to empower the visually impaired by utilizing advanced visual recognition technology to detect objects in their environment. Paired with real-time audio feedback through an earpiece, it provides immediate information about the objects in front of them, helping users navigate their surroundings with greater confidence and independence. This seamless integration of technology ensures a more intuitive and reliable experience, making everyday activities easier and safer for those with visual impairments.</h6>
+    <button class="download-button animate__animated animate__fadeIn">Download the App</button>
+  </div>
+  <div class="right-content">
+    <div class="image-container animate__animated animate__fadeInRight">
+      <img src="mainapp.png" alt="Smart Headwear Device">
+    </div>
+  </div>
+</section>
+
+<script>
+  // Function to create floating circles
+  function createFloatingCircles() {
+    const circleContainer = document.querySelector('.floating-circles');
+    const numCircles = 5; // Number of circles to create
+
+    for (let i = 0; i < numCircles; i++) {
+      const circle = document.createElement('div');
+      circle.classList.add('circle');
+
+      // Randomize initial position
+      const randomX = Math.random() * window.innerWidth;
+      const randomY = Math.random() * window.innerHeight;
+      circle.style.left = `${randomX}px`;
+      circle.style.top = `${randomY}px`;
+
+      // Randomize animation duration and delay
+      const randomDuration = 5 + Math.random() * 2; // Between 5s and 15s
+      const randomDelay = Math.random() * 2; // Between 0s and 5s
+      circle.style.animationDuration = `${randomDuration}s`;
+      circle.style.animationDelay = `-${randomDelay}s`; // Negative delay for staggered start
+
+      circleContainer.appendChild(circle);
+    }
+  }
+
+  // Call the function to create circles when the page loads
+  window.addEventListener('load', createFloatingCircles);
+</script>
+
+  <!-- Scroll 2: Device Components -->
+  <section id="scroll-2" class="scroll-section components-section">
+    <h1 class="animate__animated animate__fadeIn">Device Components</h1>
+    <h2 class="animate__animated animate__fadeIn">We meticulously researched and selected the most reliable and<br> compatible components to ensure seamless functionality <br>and optimal performance.</h2>
+    <div class="image-grid">
+      <div class="image-item">
+        <div class="image-container">
+          <img src="espcam.jpg" alt="Head-wear Frame">
+        </div>
+        <p>ESP32 is powerful, Wi-Fi and Bluetooth-enabled microcontroller designed for IoT and embedded applications.</p>
+      </div>
+      <div class="image-item">
+        <div class="image-container">
+          <img src="esp32.png" alt="Camera Module">
+        </div>
+        <p>ESP32-CAM, a compact ESP32-based module with a built-in camera, ideal for image processing and remote monitoring.</p>
+      </div>
+      <div class="image-item">
+        <div class="image-container">
+          <img src="gps.png" alt="Bluetooth Module">
+        </div>
+        <p>GPS Module is a device that receives satellite signals to determine precise location coordinates for navigation and tracking.</p>
+      </div>
+      <div class="image-item">
+        <div class="image-container">
+          <img src="earpiece.png" alt="GPS Module">
+        </div>
+        <p>Bluetooth Earpiece, a wireless audio device that connects via Bluetooth for hands-free communication and audio playback.</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- Red Rectangle Section -->
+<section id="red-rectangle" class="red-rectangle-section">
+  <div class="red-rectangle">
+    <div class="circle-container">
+      <div class="circle-item">
+        <div class="circle">1</div>
+        <p class="circle-text">Sign up to the application using with or without your email.</p>
+      </div>
+      <div class="dashed-gap"></div>
+      <div class="circle-item">
+        <div class="circle">2</div>
+        <p class="circle-text">Check for any authentication information.</p>
+      </div>
+      <div class="dashed-gap"></div>
+      <div class="circle-item">
+        <div class="circle">3</div>
+        <p class="circle-text">Sign in using the information you have provided.</p>
+      </div>
+      <div class="dashed-gap"></div>
+      <div class="circle-item">
+        <div class="circle">4</div>
+        <p class="circle-text">Connect to the device using the VISION application.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Scroll 3: Features and Functions -->
+  <section id="scroll-3" class="scroll-section features-section">
+    <div class="feature-list">
+      <!-- First Row (3 Containers) -->
+      <div class="feature-item animate__animated animate__fadeInLeft">
+        <div class="mirror-container">
+          <h2>App's Features</h2>
+          <h6>The app is expertly designed with a focus on both functionality and aesthetics. Its clean, modern interface ensures a seamless user experience, offering intuitive navigation that caters to users of all levels.</h6>
+        </div>
+      </div>
+      <div class="feature-item animate__animated animate__fadeInUp">
+        <div class="square-image-container">
+          <img src="refer .png" alt="Feature Image">
+        </div>
+        <div class="mirror-container">
+          <h3>Sign In/Up Function</h3>
+          <p>The Sign In/Up function allows users to easily create an account or log in to access personalized features and settings.</p>
+        </div>
+      </div>
+      <div class="feature-item animate__animated animate__fadeInRight">
+        <div class="square-image-container">
+          <img src="file.png" alt="Feature Image">
+        </div>
+        <div class="mirror-container">
+          <h3>Location History Log</h3>
+          <p>The app keeps a detailed record of past locations, offering users access to their complete Location History Log.</p>
+        </div>
+      </div>
+
+      <!-- Second Row (3 Containers) -->
+      <div class="feature-item animate__animated animate__fadeInLeft">
+        <div class="square-image-container">
+          <img src="location.png" alt="Feature Image">
+        </div>
+        <div class="mirror-container">
+          <h3>Precise Geolocation Mapping</h3>
+          <p>With Precise Geolocation Mapping, the app ensures accurate, real-time tracking and visualization of the user's location.</p>
+        </div>
+      </div>
+      <div class="feature-item animate__animated animate__fadeInUp">
+        <div class="square-image-container">
+          <img src="duration.png" alt="Feature Image">
+        </div>
+        <div class="mirror-container">
+          <h3>Monitoring Battery Power</h3>
+          <p>The app provides continuous monitoring of battery power, alerting users when their device needs attention.</p>
+        </div>
+      </div>
+      <div class="feature-item animate__animated animate__fadeInRight">
+        <div class="square-image-container">
+          <img src="distance.png" alt="Feature Image">
+        </div>
+        <div class="mirror-container">
+          <h3>Real-Time Distance Calculation</h3>
+          <p>Real-Time Distance Calculation instantly determines and displays the distance between the user and their Guardian.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function refreshPage() {
+      window.location.reload(); // Refreshes the page when "Home" is clicked
+    }
+  </script>
+
+<footer>
+  <div class="footer-container">
+    <h2>The only thing worse than being blind is <br>having sight but no VISION.</h2>
+    <button class="contact-btn">Download the App</button>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="#">About VISION</a> ·
+        <a href="#">How to use the app?</a> ·
+        <a href="#">What this app is about?</a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:enquiries@glassmoon.co">demoforviisionaccount@gmail.com</a>
+       <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
