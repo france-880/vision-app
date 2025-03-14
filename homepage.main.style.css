@@ -78,7 +78,7 @@ header .container {
 
 .container, .scroll-section, .hero-section {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 
@@ -273,20 +273,19 @@ html, body {
     max-width: 250px;
     transition: transform 0.3s ease, filter 0.3s ease;
     position: relative;
+    background-color: transparent;
   }
   
   .image-item .image-container {
     width: 200px;
     height: 200px;
-    background-color: #8F0E0D;
+    background-color: transparent;
     margin: 0 auto 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     border-radius: 10px;
-    
-    
   }
   
   img {
@@ -299,6 +298,7 @@ html, body {
     max-width: 100%;
     max-height: 100%;
     transition: transform 0.3s ease;
+    background-color: transparent;
   }
   
   .image-item p {
@@ -309,6 +309,7 @@ html, body {
   
   .image-grid:hover .image-item {
     filter: blur(7px);
+
   }
   
   .image-grid .image-item:hover {
@@ -331,12 +332,19 @@ html, body {
     z-index: -1;
   }
 
+  .image-grid:hover .image-item,
+.image-grid .image-item:hover {
+  background: transparent !important;
+}
+
+
 /* Red Rectangle Section Fix */
 .red-rectangle-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-top: 100px;
 }
 
 .red-rectangle {
@@ -475,23 +483,29 @@ html, body {
 .square-image-container {
   width: 90px;
   height: 90px;
-  background-color: rgba(255, 255, 255, 0);
-  border-radius: 10px; /* Slightly rounded corners */
+  background-color: transparent;
+  border-radius: 10px;
   position: absolute;
-  top: 30%; /* Positioned at 70% of the container height */
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ensure the image stays within the container */
+  overflow: hidden;
 }
 
 .square-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image covers the container */
+  object-fit: cover; 
+  overflow: hidden;
+  font: 24px;
+}
 
+.square-image-container p {
+  word-wrap: break-word; /* Para hindi lumampas ang text */
+  overflow-wrap: break-word;
 }
 
 footer {
@@ -583,11 +597,11 @@ h2 {
     height: auto;
   }
   header {
-    padding-top: 15px; /* Adjust top spacing for smaller screens */
+    padding-top: 15px;
   }
 
   .scroll-section {
-    margin-top: 20px; /* Ensure no overlap on mobile */
+    margin-top: 20px;
   }
 
   .red-rectangle-section {
